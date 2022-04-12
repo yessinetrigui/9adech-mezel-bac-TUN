@@ -1,0 +1,278 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+::-webkit-scrollbar{
+    display: none
+}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body{
+    background-color: #000411;
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#Page-content{
+    display: flex;
+    flex-direction: column;
+}
+#Title{
+    font-size: 4rem;
+    font-family: 'Bebas Neue', cursive;
+    color: #EFCB68;
+    text-align: center;
+    margin-bottom: 6px;
+}
+.title-sub{
+    font-size: 2rem;
+    font-family: 'Open Sans', sans-serif;
+    color: #68efbb;
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: .5rem;
+    -webkit-text-fill-color: #68efbb;
+
+}
+#code{
+    font-size: 2.7rem;
+    font-family:  'Lobster', cursive;
+    text-align: center;
+    margin-bottom: 3rem;
+
+}
+.container-Main span{
+    font-size: 2.2rem;
+    font-family: 'Open Sans', sans-serif;
+    color: #AEB7B3;
+}
+.Container{
+
+    width: 450px;
+    height: 200px;
+    background-color: #160C28;
+    border: 1px solid white;
+    border-radius: 5px;
+    visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    box-shadow: 0px 1px 2px 0px rgba(0,255,255,0.7),
+    1px 2px 4px 0px rgba(0,255,255,0.7),
+    2px 4px 8px 0px rgba(0,255,255,0.7),
+    2px 4px 16px 0px rgba(0,255,255,0.7);
+
+}
+#grid{
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    
+}
+.container-Main {  
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 50px 50px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "div1 div2 div3"
+      "div4 div5 div6"
+      "div7 div8 div9"
+      "div10 div11 div12";
+    }
+  
+  .div1 { grid-area: div1; }
+  
+  .div2 { grid-area: div2; }
+  
+  .div3 { grid-area: div3; }
+  
+  .div4 { grid-area: div4; }
+  
+  .div5 { grid-area: div5; }
+  
+  .div6 { grid-area: div6; }
+  
+  .div7 { grid-area: div7; }
+  
+  .div8 { grid-area: div8; }
+  
+  .div9 { grid-area: div9; }
+
+
+  .Title2{
+    font-size: 3.7rem;
+    font-family: 'Audiowide';
+    margin: auto;
+    text-align: center;
+    text-align: center;
+    margin-top: 15px;
+    color: #FF4136;
+    background-color: transparent;
+    border: 4px solid rgba(255, 255, 255, 0.63);
+    width: fit-content;
+    border-radius: 8px;
+}
+.Title2:active{
+    outline: none;
+}
+.Title2 option{
+    background-color: #000411;
+    color: #68efbb;
+    font-size: 2.6rem;
+
+}
+@media (min-width: 350px) and  (max-width: 1000px) {
+    body{
+        margin: 15px;
+    }
+    .Title2{
+        font-size: 2.2rem;
+        font-family: 'Audiowide';
+        margin: auto;
+        text-align: center;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 15px;
+   }
+    .Title2 option{
+        font-size: 1.5rem;
+    }
+    .container-Main {  
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    .Container{
+        width: 90%;
+        height: 220px;
+        background-color: #160C28;
+        border: 1px solid white;
+        border-radius: 2px;
+    }
+    #Title{
+        font-size: 2.8rem;
+        font-family: 'Bebas Neue', cursive;
+        color: #EFCB68;
+        text-align: center;
+        margin-bottom: 6px;
+        
+        
+    }
+    #title-sub{
+        font-size: 1.1rem;
+        font-family: 'Open Sans', sans-serif;
+        color: #68efbb;
+        text-align: center;
+        margin-top: 1.5rem;
+        margin-bottom: .5rem;
+
+    }
+    #code{
+        font-size: 1.7rem;
+        font-family:  'Lobster', cursive;
+        text-align: center;
+        margin-bottom: 3rem;
+    
+    }
+    .container-Main span{
+        font-size: 1.8rem;
+    }
+    #Title2{
+        font-size: 2.7rem;}
+}
+
+@media (min-width: 1000px) and  (max-width: 1600px) {
+
+    .container-Main {  
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr   ;
+        grid-template-rows: 1fr 1fr   ;
+        gap: 15px 15px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "div1 div2"
+        "div3 div4"
+        "div5 div6"
+        "div7 div8"
+        "div9 div10";
+        }
+}
+
+#cp{
+    font-size: 1.7rem;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: lighter;
+    letter-spacing: 3px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+@media (min-width: 150px) and  (max-width: 350px) {
+    body{
+        margin: 15px;
+    }
+    .Title2{
+        font-size: 1.5rem;
+        font-family: 'Audiowide';
+        margin: auto;
+        text-align: center;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 15px;
+   }
+    .Title2 option{
+        font-size: 1.1rem;
+    }
+    .container-Main {  
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    .Container{
+        width: 90%;
+        height: fit-content;
+        background-color: #160C28;
+        border: 1px solid white;
+        border-radius: 2px;
+    }
+    #Title{
+        font-size: 2.8rem;
+        font-family: 'Bebas Neue', cursive;
+        color: #EFCB68;
+        text-align: center;
+        margin-bottom: 6px;
+    }
+    #title-sub{
+        font-size: 1.1rem;
+        font-family: 'Open Sans', sans-serif;
+        color: #68efbb;
+        text-align: center;
+        margin-top: 1.5rem;
+        margin-bottom: .5rem;
+    }
+    #code{
+        font-size: 1.7rem;
+        font-family:  'Lobster', cursive;
+        text-align: center;
+        margin-bottom: 3rem;
+    
+    }
+    .container-Main span{
+        font-size: 1.8rem;
+    }
+    #Title2{
+        font-size: 2.7rem;}
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="ico.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9adeh mezel ?</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <script>
+     Info = ["Algo&Prog", "STI", "MATH", "Physique", "Philo", "Arabe", "Francais", "English", "Option Lang", "Option Art"]
+    TimeInfo = ["2022-06-09 08:00:00", "2022-06-14 08:00:00", "2022-06-13 08:00:00", "2022-06-10 08:00:00", "2022-06-08 08:00:00",
+     "2022-06-14 12:00:00", "2022-06-10 12:00:00", "2022-06-15 08:00:00", "2022-06-08 13:00:00", "2022-06-15 11:00:00"]
+
+    MATH = ["Philo", "Option Lang", "Math", "S.V.T", "Francais", "Physique", "Info", "Arabe", "English", "Option Art"]
+    TimeMATH = ["2022-06-08 08:00:00","2022-06-08 13:00:00","2022-06-09 08:00:00","2022-06-10 08:00:00","2022-06-10 12:00:00",
+    "2022-06-13 08:00:00","2022-06-14 08:00:00","2022-06-14 12:00:00","2022-06-15 08:00:00","2022-06-15 11:00:00"]
+
+    SC = ["Philo", "Option Lang", "S.V.T", "Math", "Francais", "Physique", "Info", "Arabe", "English", "Option Art"]
+    TimeSC = ["2022-06-08 08:00:00","2022-06-08 13:00:00","2022-06-09 08:00:00","2022-06-10 08:00:00","2022-06-10 12:00:00",
+    "2022-06-13 08:00:00","2022-06-14 08:00:00","2022-06-14 12:00:00","2022-06-15 08:00:00","2022-06-15 11:00:00"]
+
+    TECH = ["Philo", "Option Lang", "Technique", "Math", "Francais", "Physique", "Info", "Arabe", "English", "Option Art"]
+    TimeTECH = ["2022-06-08 08:00:00","2022-06-08 13:00:00","2022-06-09 08:00:00","2022-06-10 08:00:00","2022-06-10 12:00:00",
+    "2022-06-13 08:00:00","2022-06-14 08:00:00","2022-06-14 12:00:00","2022-06-15 08:00:00","2022-06-15 11:00:00"]
+
+    LETT = ["Philo", "Option Lang/Math/S.V.T", "Tafkir Islemi", "Francais", "Arabe", "histoire et géographie", "Info", "English", "Option Art"]
+    TimeLETT = ["2022-06-08 08:00:00","2022-06-08 13:00:00","2022-06-09 08:00:00","2022-06-10 08:00:00","2022-06-13 08:00:00",
+    "2022-06-14 08:00:00","2022-06-14 12:00:00","2022-06-15 08:00:00","2022-06-15 11:00:00"]
+
+    ECO = ["Philo", "Option Lang", "Economie", "Info", "Math", "Francais", "Gestion", "histoire et géographie", "Arabe", "English", "Option Art"]
+    TimeECO = ["2022-06-08 08:00:00","2022-06-08 13:00:00","2022-06-09 08:00:00","2022-06-09 13:00:00","2022-06-10 08:00:00","2022-06-10 12:00:00",
+    "2022-06-13 08:00:00","2022-06-14 08:00:00","2022-06-14 12:00:00","2022-06-15 08:00:00","2022-06-15 11:00:00"]
+    function GetSection(){
+        try{
+        var x = document.getElementById('SL').value;
+        if(x == "INFO"){
+            Mattab = Info
+            TimeTab = TimeInfo
+        }else if(x=="MATH"){
+            Mattab = MATH
+            TimeTab = TimeMATH
+        }else if(x=="SC"){
+            Mattab = SC
+            TimeTab = TimeSC
+        }else if(x=="TECH"){
+            Mattab = TECH
+            TimeTab = TimeTECH
+        }else if(x=="LETT"){
+            Mattab = LETT
+            TimeTab = TimeLETT
+        }else if(x=="ECO"){
+            Mattab = ECO
+            TimeTab = TimeECO
+        }
+        }catch{
+            Mattab = "NULL"
+        }
+        if(Mattab=="NULL"){
+            
+        }else{
+            for (let i=1; i<=11 ; i++){
+                try{
+                    document.getElementById("div"+i).style.visibility="hidden";
+                }catch{
+                    //
+                }
+            
+            }
+            for (let i=1; i<=Mattab.length ; i++){
+            document.getElementById("div"+i).style.visibility="visible";
+            setInterval(() => {
+            document.getElementById("title-div"+i).innerHTML = Mattab[i-1]
+            get_time_diff(TimeTab[i-1], "div"+i)
+        }, 1000)
+        }
+        }
+        
+    }
+    GetSection()
+    </script>
+  </head>
+  <body>
+    <div id="Page-content">
+      <h1 id="Title">9daeech Mezelll ??!</h1>
+      <select id="SL" class="Title2" onchange="GetSection()">
+          <option value="-1">a5tar Bac ?</option>
+          <option value="INFO">$BAC_INFO;</option>
+          <option value="MATH">$BAC_MATH;</option>
+          <option value="SC">$BAC_Science;</option>
+          <option value="TECH">$BAC_Technique;</option>
+          <option value="LETT">$BAC_Lettres;</option>
+          <option value="ECO">$BAC_Economie;</option>
+      </select>
+      <h2 id="code"><span style="color: orange;">if</span>(<span style="color: rgb(168, 95, 228);">You_Study_Well()</span>):
+        <span style="color: rgb(192, 122, 248);">print</span>(<span style="color: rgb(102, 236, 114);">"ADMIS 💗"</span>)</h2>
+      <div id="grid" class="container-Main">
+        <div class="Container" id="div1">
+            <h1 id="title-div1" class="title-sub">Null</h1> 
+            <span id="div1d" id="time">0 Days</span>
+            <span id="div1h">0 Hours</span>
+            <br>
+            <span id="div1m">0 Minutes</span>
+            <span id="div1s">0 Seconds</span>
+
+        </div>
+        <div class="Container"  id="div2">
+            <h1 id="title-div2" class="title-sub">Null</h1>
+            <span id="div2d">0 Days</span>
+            <span id="div2h">0 Hours</span>
+            <br>
+            <span id="div2m">0 Minutes</span>
+            <span id="div2s">0 Seconds</span>
+
+        </div>
+        <div class="Container"  id="div3">
+            <h1 id="title-div3" class="title-sub">Null</h1> 
+            <span id="div3d">0 Days</span>
+            <span id="div3h">0 Hours</span>
+            <br>
+            <span id="div3m">0 Minutes</span>
+            <span id="div3s">0 Seconds</span>
+
+        </div>
+        <div class="Container"  id="div4">
+            <h1 id="title-div4" class="title-sub">Null</h1> 
+            <span id="div4d">0 Days</span>
+            <span id="div4h">0 Hours</span>
+            <br>
+            <span id="div4m">0 Minutes</span>
+            <span id="div4s">0 Seconds</span>
+
+        </div>
+        <div class="Container"  id="div5">
+            <h1 id="title-div5" class="title-sub">Null</h1>
+            <span id="div5d">0 Days</span>
+            <span id="div5h">0 Hours</span>
+            <br>
+            <span id="div5m">0 Minutes</span>
+            <span id="div5s">0 Seconds</span>
+
+        </div>
+        <div class="Container"  id="div6">
+            <h1 id="title-div6" class="title-sub">Null</h1> 
+            <span id="div6d">0 Days</span>
+            <span id="div6h">0 Hours</span>
+            <br>
+            <span id="div6m">0 Minutes</span>
+            <span id="div6s">0 Seconds</span>
+
+        </div>
+        <div class="Container"  id="div7">
+            <h1 id="title-div7" class="title-sub">Null</h1> 
+            <span id="div7d">0 Days</span>
+            <span id="div7h">0 Hours</span>
+            <br>
+            <span id="div7m">0 Minutes</span>
+            <span id="div7s">0 Seconds</span>
+
+        </div>
+        <div class="Container"  id="div8">
+            <h1 id="title-div8" class="title-sub">Null</h1> 
+            <span id="div8d">0 Days</span>
+            <span id="div8h">0 Hours</span>
+            <br>
+            <span id="div8m">0 Minutes</span>
+            <span id="div8s">0 Seconds</span>
+
+        </div>
+        <div class="Container"  id="div9">
+            <h1 id="title-div9" class="title-sub">Null</h1> 
+            <span id="div9d" id="time">0 Days</span>
+            <span id="div9h">0 Hours</span>
+            <br>
+            <span id="div9m">0 Minutes</span>
+            <span id="div9s">0 Seconds</span>
+
+        </div>
+        <div class="Container"  id="div10">
+            <h1 id="title-div10" class="title-sub">Null</h1> 
+            <span id="div10d" id="time">0 Days</span>
+            <span id="div10h">0 Hours</span>
+            <br>
+            <span id="div10m">0 Minutes</span>
+            <span id="div10s">0 Seconds</span>
+
+        </div>
+        <div class="Container"  id="div11">
+            <h1 id="title-div11" class="title-sub">Null</h1> 
+            <span id="div11d" id="time">0 Days</span>
+            <span id="div11h">0 Hours</span>
+            <br>
+            <span id="div11m">0 Minutes</span>
+            <span id="div11s">0 Seconds</span>
+
+        </div>
+      </div>
+      <h3 id="cp">
+          Made with 💖 By Yessine TRIGUI.
+      </h3>
+  </body>
+</html>
