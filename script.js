@@ -14,9 +14,17 @@ function get_time_diff(datetime, clas) {
     
     if (datetime < now) {
         var milisec_diff = now - datetime;
+        document.getElementById(clas+"x").innerHTML = "DONE ✔"
+        document.getElementById(clas+"x").style.display = "block"
+        document.getElementById(clas+"d").innerHTML = ""
+    document.getElementById(clas+'h').innerHTML ="";
+    document.getElementById(clas+'m').innerHTML =""
+    document.getElementById(clas+"s").innerHTML = ""
+
+        return -1
     } else {
         var milisec_diff = datetime - now;
-    }
+    
     var days = Math.floor(milisec_diff / 1000 / 60 / (60 * 24));
     
     var date_diff = new Date(milisec_diff);
@@ -30,5 +38,5 @@ function get_time_diff(datetime, clas) {
     document.getElementById(clas+"s").innerHTML = date_diff.getSeconds() + " Seconds";
     return days + " Days " + date_diff.getHours() + " Hours " + date_diff.getMinutes() + " Minutes " + date_diff
         .getSeconds() + " Seconds";
-    
+    }
     }
